@@ -35,11 +35,6 @@ class Auth extends CI_Controller
 
         $user = $this->db->get_where('tb_user', ['email' => $email])->row_array();
 
-        // $a = $user['password'];
-        // $b = md5($password);
-        // var_dump($b);
-        // die;
-
         //jika usernya ada
         if ($user) {
             //jika usernya aktif
@@ -55,20 +50,21 @@ class Auth extends CI_Controller
                     ];
                     //password bener
                     $this->session->set_userdata($data);
-                    if ($user['role_id'] == 1) {
-                        redirect('admin');
-                    }
-                    if ($user['role_id'] == 2) {
-                        redirect('manager');
-                    }
-                    if ($user['role_id'] == 3) {
-                        redirect('analyst');
-                    }
-                    if ($user['role_id'] == 4) {
-                        redirect('servicedesk');
-                    } else {
-                        redirect('user');
-                    }
+                    redirect('mainmenu');
+                    // if ($user['role_id'] == 1) {
+                    //     redirect('superadmin');
+                    // }
+                    // if ($user['role_id'] == 2) {
+                    //     redirect('manager');
+                    // }
+                    // if ($user['role_id'] == 3) {
+                    //     redirect('checker');
+                    // }
+                    // if ($user['role_id'] == 4) {
+                    //     redirect('admin');
+                    // } else {
+                    //     redirect('user');
+                    // }
                 } else {
                     //password salah
                     $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Wrong Password!</div>');
@@ -111,8 +107,6 @@ class Auth extends CI_Controller
                 'name' => htmlspecialchars($name),
                 'email' => htmlspecialchars($email),
                 'password' => $password1,
-                // 'password' => password_hash($this->input->post('password1'),
-                //  PASSWORD_BCRYPT),
                 'role_id' => 1,
                 'status' => 1
             ];
