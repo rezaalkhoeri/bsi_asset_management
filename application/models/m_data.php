@@ -57,6 +57,12 @@ class M_data extends CI_Model{
     $this->db->update_batch($table, $data, $where);
     }
 
+    // DETAIL ITEM
+    function join_table_detail_item(){ //item
+        $sql = "SELECT D.*, I.jenis, I.merek FROM tb_detail_item D JOIN tb_item I ON D.id_item = I.id";
+        $query = $this->db->query($sql);
+        return $query;
+    }
 
 }
 
