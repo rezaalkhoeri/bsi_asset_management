@@ -79,6 +79,18 @@
           <span class="font-weight-bold">Location</span></a>
       </li>
 
+      <li class="nav-item">
+        <a class="nav-link" href="<?= base_url('Requisition/index'); ?>">
+          <i class="fas fa-file-signature"></i>
+          <span class="font-weight-bold">Requisition</span></a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="<?= base_url('Distribution/index'); ?>">
+          <i class="fas fa-people-carry"></i>
+          <span class="font-weight-bold">Distribution</span></a>
+      </li>
+      
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block">
 
