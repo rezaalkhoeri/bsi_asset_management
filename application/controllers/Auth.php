@@ -113,7 +113,7 @@ class Auth extends CI_Controller
 
             $this->db->insert('tb_user', $data);
             $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Thank you! Your account has been created. Please Login.</div>');
-            redirect('users');
+            redirect('user');
         }
     }
 
