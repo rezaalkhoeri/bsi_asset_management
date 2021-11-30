@@ -30,7 +30,7 @@ $this->load->view('partial/head');
 
           <div class="card shadow mb-4">
             <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary">Detail Request</h6>
+              <h6 class="m-0 font-weight-bold text-primary">Detail Distribution</h6>
             </div>
             <div class="card-body">
               <div class="form-group">
@@ -47,9 +47,14 @@ $this->load->view('partial/head');
                       <td style="text-align: left;"><?= $a->transactionCode ?></td>
                     </tr>
                     <tr>
-                      <td style="text-align: left;">Requestor</td>
+                      <td style="text-align: left;">Recipient</td>
                       <td style="text-align: center;">:</td>
-                      <td style="text-align: left;"><?= $a->requestor ?></td>
+                      <td style="text-align: left;"><?= $a->recipient ?></td>
+                    </tr>
+                    <tr>
+                      <td style="text-align: left;">Giver</td>
+                      <td style="text-align: center;">:</td>
+                      <td style="text-align: left;"><?= $a->giver ?></td>
                     </tr>
                     <tr>
                       <td style="text-align: left;">Date</td>
@@ -101,6 +106,8 @@ $this->load->view('partial/head');
                 </table>
               </div>
             </div>
+
+
           </div>
 
         </div>

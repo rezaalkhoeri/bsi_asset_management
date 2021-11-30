@@ -42,7 +42,6 @@ $this->load->view('partial/head');
                   <thead>
                     <tr>
                       <th scope="col">Ticket</th>
-                      <th scope="col">Cost Center</th>
                       <th scope="col">Quantity</th>
                       <th scope="col">Date</th>
                       <th scope="col">Requestor</th>
@@ -58,7 +57,6 @@ $this->load->view('partial/head');
                     ?>
                       <tr>
                         <td scope="col"><?= $a->no_tiket ?></td>
-                        <td scope="col"><?= $a->cost_center ?></td>
                         <td scope="col"><?= $a->quantity ?></td>
                         <td scope="col"><?= $a->date ?></td>
                         <td scope="col"><?= $a->requestor ?></td>
